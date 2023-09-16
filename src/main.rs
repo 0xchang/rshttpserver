@@ -35,8 +35,8 @@ async fn main() {
 fn getcmd() -> ArgMatches {
     let matches = Command::new("rshttpserver")
         .version("1.0")
-        .author("Your Name")
-        .about("A simple command line program")
+        .author("0xchang")
+        .about("A simple http download server")
         .arg(
             Arg::new("port")
                 .short('p')
