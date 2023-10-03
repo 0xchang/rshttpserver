@@ -29,7 +29,14 @@ async fn main() {
     let acceptor = TcpListener::new(format!("{}:{}", ipaddr, port))
         .bind()
         .await;
+
     Server::new(acceptor).serve(router).await;
+}
+
+
+#[handler]
+async fn index()->String{
+    "hello world".to_string()
 }
 
 fn getcmd() -> ArgMatches {
